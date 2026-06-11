@@ -160,7 +160,6 @@
   // Stato
   var pos = new THREE.Vector3(0, 0, 6);
   var heading = 0, targetHeading = 0;
-  var move = { up: false, down: false, left: false, right: false };
   var auto = null; var bob = 0;
   var SPEED = 9, BOUND = 30;
 
@@ -189,34 +188,6 @@
       li.appendChild(b); menu.appendChild(li);
     });
   }
-  // Pad direzionale
-  root.querySelectorAll('[data-move]').forEach(function (btn) {
-    var dir = btn.getAttribute('data-move');
-    function on(e) { e.preventDefault(); move[dir] = true; auto = null; }
-    function off() { move[dir] = false; }
-    btn.addEventListener('mousedown', on); btn.addEventListener('touchstart', on, { passive: false });
-    btn.addEventListener('mouseup', off); btn.addEventListener('mouseleave', off); btn.addEventListener('touchend', off); btn.addEventListener('touchcancel', off);
-  });
-  // Tastiera (quando la mappa è in vista)
-  var inView = false;
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (en) { inView = en[0].isIntersecting; }, { threshold: 0.3 }).observe(root);
-  }
-  window.addEventListener('keydown', function (e) {
-    if (!inView) return;
-    var k = e.key;
-    if (k === 'ArrowUp' || k === 'w') { move.up = true; auto = null; e.preventDefault(); }
-    else if (k === 'ArrowDown' || k === 's') { move.down = true; auto = null; e.preventDefault(); }
-    else if (k === 'ArrowLeft' || k === 'a') { move.left = true; auto = null; e.preventDefault(); }
-    else if (k === 'ArrowRight' || k === 'd') { move.right = true; auto = null; e.preventDefault(); }
-  });
-  window.addEventListener('keyup', function (e) {
-    var k = e.key;
-    if (k === 'ArrowUp' || k === 'w') move.up = false;
-    else if (k === 'ArrowDown' || k === 's') move.down = false;
-    else if (k === 'ArrowLeft' || k === 'a') move.left = false;
-    else if (k === 'ArrowRight' || k === 'd') move.right = false;
-  });
 
   function showInfo(poi) {
     if (!info) return;
@@ -251,10 +222,6 @@
       var dist = Math.hypot(dx, dz);
       if (dist < 0.4) { showInfo(auto); auto = null; dx = dz = 0; }
       else { dx /= dist; dz /= dist; }
-    } else {
-      if (move.up) dz -= 1; if (move.down) dz += 1;
-      if (move.left) dx -= 1; if (move.right) dx += 1;
-      var l = Math.hypot(dx, dz); if (l > 0) { dx /= l; dz /= l; }
     }
     var moving = (dx || dz);
     if (moving) {

@@ -644,7 +644,14 @@ em { font-style: italic; }
   box-shadow: var(--shadow-s);
 }
 .feature-card__media { position: absolute; inset: 0; z-index: -2; }
-.feature-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease-out); }
+.feature-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.9s var(--ease-out); }
+/* il <picture> inline non garantisce il cover: lo rendo un layer pieno */
+.feature-card__media picture,
+.event-card__media picture,
+.page-hero__media picture,
+.cta-strip__media picture,
+.spotlight__media picture,
+.cardgrid figure .feature-card__media picture { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 .feature-card::after {
   content: ''; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(to top, rgba(24,39,27,0.9) 8%, rgba(24,39,27,0.25) 55%, rgba(24,39,27,0.05) 100%);
@@ -744,7 +751,7 @@ em { font-style: italic; }
 .gallery__slide { scroll-snap-align: center; }
 .gallery__slide {
   position: relative; margin: 0;
-  height: clamp(300px, 62vw, 460px);
+  height: clamp(340px, 76vh, 660px);
   width: auto;
   aspect-ratio: 3 / 2;
   flex: 0 0 auto;
@@ -1038,7 +1045,6 @@ em { font-style: italic; }
   border-radius: var(--r-xl); overflow: hidden;
   background: linear-gradient(160deg, #b9d2df, #dfe9cf);
   box-shadow: var(--shadow-l);
-  touch-action: none;
 }
 .map3d__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .map3d__menu {
