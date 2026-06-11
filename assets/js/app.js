@@ -231,8 +231,9 @@
   function initSwiper() {
     if (typeof window.Swiper === 'undefined') return;
     document.querySelectorAll('[data-swiper]').forEach(function (el) {
-      var prev = el.parentElement.querySelector('[data-swiper-prev]');
-      var next = el.parentElement.querySelector('[data-swiper-next]');
+      var scope = el.closest('section') || el.parentElement;
+      var prev = scope.querySelector('[data-swiper-prev]');
+      var next = scope.querySelector('[data-swiper-next]');
       new window.Swiper(el, {
         slidesPerView: 'auto',
         spaceBetween: 18,

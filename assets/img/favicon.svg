@@ -3,10 +3,10 @@
     <clipPath id="vgClip"><circle cx="24" cy="24" r="24"/></clipPath>
   </defs>
   <g clip-path="url(#vgClip)">
-    <rect width="48" height="48" fill="#2e4a34"/>
-    <circle cx="24" cy="18.5" r="7.4" fill="#e0bd6f"/>
+    <rect width="48" height="48" fill="#007a52"/>
+    <circle cx="24" cy="18.5" r="7.4" fill="#fcdf49"/>
     <path d="M-2,50 L8,30 L16,24 L24,30 L33,20.5 L42,29 L50,25 L50,50 Z" fill="#f6f0e4"/>
-    <path d="M-2,50 L10,38.5 L22,34.5 L34,40.5 L50,33.5 L50,50 Z" fill="#b0512f"/>
+    <path d="M-2,50 L10,38.5 L22,34.5 L34,40.5 L50,33.5 L50,50 Z" fill="#c22714"/>
   </g>
-  <circle cx="24" cy="24" r="23" fill="none" stroke="#18271b" stroke-opacity="0.18" stroke-width="2"/>
+  <circle cx="24" cy="24" r="23" fill="none" stroke="#0c2a1e" stroke-opacity="0.2" stroke-width="2"/>
 </svg>
