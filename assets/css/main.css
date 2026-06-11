@@ -710,7 +710,7 @@ em { font-style: italic; }
 }
 .spotlight--right::after {
   background:
-    linear-gradient(to left, rgba(8,24,16,0.95) 0%, rgba(8,24,16,0.8) 38%, rgba(8,24,16,0.45) 70%, rgba(8,24,16,0.35) 100%),
+    linear-gradient(to right, rgba(8,24,16,0.95) 0%, rgba(8,24,16,0.8) 38%, rgba(8,24,16,0.45) 70%, rgba(8,24,16,0.35) 100%),
     linear-gradient(rgba(8,24,16,0.35), rgba(8,24,16,0.45));
 }
 .spotlight__inner {
@@ -719,7 +719,7 @@ em { font-style: italic; }
   display: flex;
 }
 .spotlight__box { max-width: 38rem; }
-.spotlight--right .spotlight__inner { justify-content: flex-end; }
+.spotlight--right .spotlight__inner { justify-content: flex-start; }
 .spotlight__title { color: var(--on-dark); font-size: var(--fs-h1); margin-top: var(--space-s); }
 .spotlight__text { margin-top: var(--space-m); color: var(--on-dark-soft); font-size: var(--fs-lead); line-height: 1.5; }
 .spotlight__actions { margin-top: var(--space-l); display: flex; flex-wrap: wrap; gap: var(--space-s); }
@@ -1131,6 +1131,20 @@ em { font-style: italic; }
 @media (prefers-reduced-motion: reduce) { .bear-silhouette { animation: none; } }
 @media (max-width: 720px) { .bear-silhouette { width: 88px; right: 3%; bottom: 5%; } .paws { gap: 1rem; } }
 
+/* ---------- Orso che cammina (fondo pagina natura) ---------- */
+.bearwalk { position: fixed; left: 0; right: 0; bottom: 0; height: 92px; z-index: 35; pointer-events: none; overflow: hidden; }
+.bearwalk__paws { position: absolute; inset: 0; }
+.bearwalk__paw { position: absolute; bottom: 16px; width: 15px; height: 15px; margin-left: -7px; color: var(--forest); opacity: 0; transform: translateY(7px) scale(0.6); transition: opacity 0.45s, transform 0.45s var(--ease); }
+.bearwalk__paw.on { opacity: 0.45; transform: translateY(0) scale(1); }
+.bearwalk__paw:nth-child(even) { bottom: 26px; }
+.bearwalk__paw svg { width: 100%; height: 100%; }
+.bearwalk__bear { position: absolute; bottom: 8px; left: 0; width: clamp(58px, 8vw, 88px); color: var(--forest-deep); filter: drop-shadow(0 5px 6px rgba(0,0,0,0.18)); will-change: transform; }
+.bearwalk__bear svg { width: 100%; height: auto; display: block; }
+.bearwalk__leg { transform-box: fill-box; transform-origin: top center; animation: bearStep 0.5s var(--ease) infinite alternate; }
+.bearwalk__leg--b { animation-delay: -0.25s; }
+@keyframes bearStep { from { transform: rotate(-12deg); } to { transform: rotate(12deg); } }
+@media (prefers-reduced-motion: reduce) { .bearwalk { display: none; } }
+
 /* ---------- Cursore custom (bussola da trekking) ---------- */
 .cursor { position: fixed; top: 0; left: 0; width: 44px; height: 44px; margin: -22px 0 0 -22px; z-index: 9000; pointer-events: none; opacity: 0; transition: opacity 0.35s; will-change: transform; }
 body.has-cursor .cursor { opacity: 1; }
@@ -1143,33 +1157,44 @@ body.has-cursor, body.has-cursor a, body.has-cursor button, body.has-cursor inpu
 .cursor__dot { position: absolute; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: var(--ochre); }
 @keyframes cursorSpin { to { transform: rotate(360deg) scale(1.35); } }
 
-/* ---------- Indice-sentiero laterale ---------- */
-.trail-nav { position: fixed; left: 0; top: 0; bottom: 0; width: 80px; z-index: 60; display: none; pointer-events: none; }
-.trail-nav__rail { position: absolute; left: 22px; top: 130px; bottom: 90px; width: 2px; }
-.trail-nav__track { position: absolute; inset: 0; width: 2px; background: repeating-linear-gradient(var(--paper-3) 0 6px, transparent 6px 13px); border-radius: 2px; }
-.trail-nav__progress { position: absolute; top: 0; left: 0; width: 2px; height: 0; background: linear-gradient(var(--forest), var(--ochre)); border-radius: 2px; transition: height 0.18s linear; }
-.trail-nav__hiker { position: absolute; left: 1px; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; background: var(--forest); color: var(--paper); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-s); transition: top 0.18s linear; z-index: 4; }
-.trail-nav__hiker svg { width: 16px; height: 16px; }
+/* ---------- Indice-sentiero laterale curvo (destra) ---------- */
+.trail-nav { position: fixed; right: 0; top: 0; bottom: 0; width: 190px; z-index: 60; display: none; pointer-events: none; }
+.trail-nav__svg { position: absolute; inset: 78px 26px 84px 0; width: calc(100% - 26px); height: calc(100% - 162px); overflow: visible; }
+.trail-nav__bg { stroke: var(--paper-3); stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; }
+.trail-nav__fg { stroke: var(--forest); stroke-width: 2.5; stroke-linecap: round; transition: stroke-dashoffset 0.15s linear; }
+.trail-nav__layer { position: absolute; inset: 78px 26px 84px 0; }
 .trail-nav__points { position: absolute; inset: 0; }
-.wp { position: absolute; left: 1px; transform: translateY(-50%); pointer-events: auto; }
-.wp__link { display: flex; align-items: center; gap: 0.6rem; }
-.wp__dot { width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--paper); border: 2px solid var(--paper-3); display: flex; align-items: center; justify-content: center; color: var(--forest); transition: transform 0.3s var(--ease), background 0.3s, border-color 0.3s, box-shadow 0.3s; position: relative; z-index: 2; }
+.wp { position: absolute; left: 0; right: 0; transform: translateY(-50%); }
+.wp__link { position: relative; display: block; height: 0; }
+.wp__connector { position: absolute; top: -1px; height: 2px; z-index: 1; background: repeating-linear-gradient(90deg, var(--paper-3) 0 3px, transparent 3px 7px); transition: background 0.3s; pointer-events: none; }
+.wp__dot { position: absolute; width: 16px; height: 16px; margin: -8px; border-radius: 50%; background: var(--paper); border: 2px solid var(--paper-3); display: flex; align-items: center; justify-content: center; color: var(--forest); transition: transform 0.35s var(--ease), background 0.35s, border-color 0.35s, box-shadow 0.35s; z-index: 3; pointer-events: auto; }
 .wp__pin { width: 9px; height: 9px; opacity: 0; transform: scale(0.4); transition: opacity 0.3s, transform 0.3s var(--ease); }
 .wp__pin svg { width: 100%; height: 100%; }
-.wp__label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); background: var(--paper); padding: 0.35rem 0.65rem; border-radius: 100px; box-shadow: var(--shadow-m); white-space: nowrap; opacity: 0; transform: translateX(-8px) scale(0.9); transition: opacity 0.3s, transform 0.3s var(--ease); display: inline-flex; gap: 0.5rem; align-items: center; }
-.wp__label b { color: var(--forest); font-family: var(--font-display); }
-.wp:hover .wp__label { opacity: 1; transform: translateX(0) scale(1); }
-.wp.is-reached .wp__dot { border-color: var(--forest); background: var(--forest); color: var(--paper); }
-.wp.is-active .wp__dot { border-color: var(--forest); background: var(--ochre); transform: scale(1.5); box-shadow: 0 0 0 6px rgba(0, 122, 82, 0.16); animation: wpPulse 1.8s var(--ease) infinite; }
+.wp__label { position: absolute; right: 8px; top: -14px; z-index: 6; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.34rem 0.6rem 0.34rem 0.5rem; border-radius: 100px; background: var(--paper); box-shadow: var(--shadow-s); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em; color: var(--ink-soft); white-space: nowrap; pointer-events: auto; transition: transform 0.3s var(--ease), box-shadow 0.3s, color 0.3s; }
+.wp.is-active .wp__label { z-index: 7; }
+.wp__label b { font-family: var(--font-display); color: var(--forest); font-size: 0.92em; }
+.wp:hover .wp__label, .wp.is-active .wp__label { transform: translateX(-3px) scale(1.06); box-shadow: var(--shadow-m); color: var(--ink); }
+.wp.is-reached .wp__dot { background: var(--forest); border-color: var(--forest); color: var(--paper); }
+.wp.is-reached .wp__connector { background: var(--forest); }
+.wp.is-active .wp__dot { background: var(--ochre); border-color: var(--forest); transform: scale(1.55); box-shadow: 0 0 0 6px rgba(0, 122, 82, 0.16); animation: wpPulse 1.8s var(--ease) infinite; }
 .wp.is-active .wp__pin { opacity: 1; transform: scale(1); }
-@keyframes wpPulse { 0%, 100% { box-shadow: 0 0 0 5px rgba(0,122,82,0.18); } 50% { box-shadow: 0 0 0 9px rgba(0,122,82,0.05); } }
-.trail-nav__detour { position: absolute; left: 0; pointer-events: auto; transition: opacity 0.4s; }
-.trail-nav__detour-path { position: absolute; left: 8px; top: -34px; width: 120px; height: 80px; color: var(--ochre); }
-.trail-nav__detour-pin { position: absolute; left: 96px; top: 24px; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; color: var(--forest); }
-.trail-nav__detour-pin > span { width: 36px; height: 36px; border-radius: 50%; background: var(--ochre); display: flex; align-items: center; justify-content: center; animation: bobPin 1.4s var(--ease) infinite; }
-.trail-nav__detour-pin em { font-style: normal; font-size: 0.68rem; font-weight: 700; background: var(--ink); color: var(--paper); padding: 0.25rem 0.55rem; border-radius: 100px; white-space: nowrap; }
+@keyframes wpPulse { 0%, 100% { box-shadow: 0 0 0 5px rgba(0,122,82,0.18); } 50% { box-shadow: 0 0 0 10px rgba(0,122,82,0.04); } }
+.trail-nav__hiker { position: absolute; width: 32px; height: 32px; margin: -16px; border-radius: 50%; background: var(--forest); color: var(--paper); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-m); z-index: 5; }
+.trail-nav__hiker svg { width: 17px; height: 17px; }
+.trail-nav__hiker::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--ochre); animation: hikerRing 2s var(--ease) infinite; }
+@keyframes hikerRing { 0% { transform: scale(0.85); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+.trail-nav__paws { position: absolute; inset: 0; }
+.trail-paw { position: absolute; width: 13px; height: 13px; margin: -6.5px; color: var(--ochre-300); opacity: 0; transform: scale(0.4) rotate(var(--r, 0deg)); transition: opacity 0.4s, transform 0.4s var(--ease); }
+.trail-paw.on { opacity: 0.85; transform: scale(1) rotate(var(--r, 0deg)); }
+.trail-paw svg { width: 100%; height: 100%; }
+.trail-nav__detour { position: absolute; right: 8px; pointer-events: auto; transform: translateY(-50%); }
+.trail-nav__detour[hidden] { display: none; }
+.trail-nav__detour-pin { display: flex; align-items: center; gap: 0.5rem; background: var(--ink); color: var(--paper); padding: 0.4rem 0.7rem 0.4rem 0.45rem; border-radius: 100px; box-shadow: var(--shadow-l); animation: bobPin 1.4s var(--ease) infinite; }
+.trail-nav__detour-pin > span { width: 26px; height: 26px; border-radius: 50%; background: var(--ochre); color: var(--ink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.trail-nav__detour-pin > span svg { width: 14px; height: 14px; }
+.trail-nav__detour-pin em { font-style: normal; font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
 @keyframes bobPin { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) { .trail-nav { display: block; } }
+@media (min-width: 1366px) and (prefers-reduced-motion: no-preference) { .trail-nav { display: block; } }
 
 /* ---------- Reveal / animazioni (gated da .js) ---------- */
 .reveal { opacity: 1; transform: none; }

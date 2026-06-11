@@ -74,68 +74,73 @@
     <svg class="cursor__needle" viewBox="0 0 44 44"><path d="M22 7 L26 24 L22 20 L18 24 Z" fill="currentColor"/></svg>
     <span class="cursor__dot"></span>
   </div>
-  <aside class="trail-nav" data-trail aria-label="Percorso della pagina">
-    <div class="trail-nav__rail">
-      <div class="trail-nav__track"></div>
-      <div class="trail-nav__progress" data-trail-progress></div>
-      <div class="trail-nav__hiker" data-trail-hiker>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.8"/><path d="M12 9l-3 4 2 2-1 5M12 9l3 1 2 3M9 13l-3 1M6 21l3-6"/></svg>
-      </div>
+  <aside class="trail-nav" data-trail aria-label="Il sentiero di Gioia">
+    <svg class="trail-nav__svg" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path class="trail-nav__bg" d="M68 8 C 30 105 96 205 54 312 C 20 410 92 520 58 632 C 30 742 88 828 56 928 L 62 994" fill="none" vector-effect="non-scaling-stroke"/>
+      <path class="trail-nav__fg" data-trail-path d="M68 8 C 30 105 96 205 54 312 C 20 410 92 520 58 632 C 30 742 88 828 56 928 L 62 994" fill="none" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="trail-nav__layer" data-trail-layer>
       <ul class="trail-nav__points">
-        <li class="wp" data-target="top">
+        <li class="wp" data-target="top" data-i="0">
           <a class="wp__link" href="#top">
+            <span class="wp__label"><b>01</b><span class="wp__name">Partenza</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>01</b>Partenza</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="benvenuti">
-          <a class="wp__link" href="#benvenuti">
+        <li class="wp" data-target="benvenuti" data-external="1" data-i="1">
+          <a class="wp__link" href="storia.html">
+            <span class="wp__label"><b>02</b><span class="wp__name">La storia</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>02</b>Il borgo</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="conosci">
-          <a class="wp__link" href="#conosci">
+        <li class="wp" data-target="conosci" data-external="1" data-i="2">
+          <a class="wp__link" href="patrimonio.html">
+            <span class="wp__label"><b>03</b><span class="wp__name">Chiese e arte</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>03</b>Conosci</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="orso-sec">
-          <a class="wp__link" href="#orso-sec">
+        <li class="wp" data-target="orso-sec" data-external="1" data-i="3">
+          <a class="wp__link" href="natura.html">
+            <span class="wp__label"><b>04</b><span class="wp__name">L’orso</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>04</b>L’orso</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="vivi">
-          <a class="wp__link" href="#vivi">
+        <li class="wp" data-target="vivi" data-external="1" data-i="4">
+          <a class="wp__link" href="sentieri.html">
+            <span class="wp__label"><b>05</b><span class="wp__name">I sentieri</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>05</b>Esperienze</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="galleria">
+        <li class="wp" data-target="galleria" data-i="5">
           <a class="wp__link" href="#galleria">
+            <span class="wp__label"><b>06</b><span class="wp__name">Galleria</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>06</b>Galleria</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="eventi">
-          <a class="wp__link" href="#eventi">
+        <li class="wp" data-target="eventi" data-external="1" data-i="6">
+          <a class="wp__link" href="eventi.html">
+            <span class="wp__label"><b>07</b><span class="wp__name">Eventi</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>07</b>Eventi</span>
+            <span class="wp__connector"></span>
           </a>
         </li>
-        <li class="wp" data-target="contatti" data-external="1">
+        <li class="wp" data-target="contatti" data-external="1" data-i="7">
           <a class="wp__link" href="contatti.html">
+            <span class="wp__label"><b>08</b><span class="wp__name">Contatti</span></span>
             <span class="wp__dot"><span class="wp__pin"><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
-            <span class="wp__label"><b>08</b>Contatti</span>
+            <span class="wp__connector"></span>
           </a>
         </li></ul>
+      <div class="trail-nav__paws" data-trail-paws></div>
+      <div class="trail-nav__hiker" data-trail-hiker><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.8"/><path d="M12 9l-3 4 2 2-1 5M12 9l3 1 2 3M9 13l-3 1M6 21l3-6"/></svg></div>
       <div class="trail-nav__detour" data-trail-detour hidden>
-        <svg class="trail-nav__detour-path" viewBox="0 0 120 80" preserveAspectRatio="none"><path d="M6 6 C 50 6, 60 40, 110 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 6" stroke-linecap="round"/></svg>
-        <a class="trail-nav__detour-pin" href="contatti.html">
-          <span><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <em>Perso? Scrivici</em>
-        </a>
+        <a class="trail-nav__detour-pin" href="contatti.html"><span><svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><em>Ti sei perso? Scrivici</em></a>
       </div>
     </div>
   </aside>
@@ -394,7 +399,7 @@
     </section>
 
     <!-- SPOTLIGHT TORRE / MEMORIA -->
-    <section class="spotlight" id="torre-sec" aria-labelledby="torre-t">
+    <section class="spotlight spotlight--right" id="torre-sec" aria-labelledby="torre-t">
       <div class="spotlight__media"><picture>
   <source type="image/webp" srcset="assets/img/gioiadrone-14-480.webp 480w, assets/img/gioiadrone-14-960.webp 960w, assets/img/gioiadrone-14-1600.webp 1600w" sizes="100vw">
   <img src="assets/img/gioiadrone-14-1600.jpg" width="8192" height="6144" alt="La Torre medievale di Sperone sullo sperone roccioso sotto un cielo di nuvole" loading="lazy" decoding="async" data-lqip style="background-image:url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoYABIAPxF0sVAsJySjMAgBgCIJQBf9g3KQnGQDPQdqEAD+sU48NgVoGGD/AnA/FA0CwkJqKt0RCHaQ6JLslHNlEV9mjfxPbFYwQn5zgiYAAA==);background-size:cover;background-position:center">

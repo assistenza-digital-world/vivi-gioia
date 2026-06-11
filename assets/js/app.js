@@ -355,59 +355,121 @@
     requestAnimationFrame(raf);
   }
 
-  /* ---------------- Indice-sentiero laterale ---------------- */
+  /* ---------------- Indice-sentiero laterale curvo ---------------- */
   function initTrail() {
     var trail = document.querySelector('[data-trail]');
     if (!trail || prefersReduced) return;
-    if (window.innerWidth < 1200) return;
-    var progress = trail.querySelector('[data-trail-progress]');
+    if (window.innerWidth < 1366) return;
+    var svg = trail.querySelector('.trail-nav__svg');
+    var path = trail.querySelector('[data-trail-path]');
     var hiker = trail.querySelector('[data-trail-hiker]');
     var detour = trail.querySelector('[data-trail-detour]');
-    var points = [].slice.call(trail.querySelectorAll('.wp')).map(function (wp) {
-      var id = wp.getAttribute('data-target');
-      return { wp: wp, el: wp.getAttribute('data-external') ? null : document.getElementById(id), frac: 0 };
-    });
+    var pawsBox = trail.querySelector('[data-trail-paws]');
+    if (!path || !svg) return;
+    var L = path.getTotalLength();
+    path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
+
+    function vb() { return { w: svg.clientWidth, h: svg.clientHeight }; }
+    function pointAt(frac) {
+      var p = path.getPointAtLength(Math.max(0, Math.min(1, frac)) * L);
+      var d = vb();
+      return { x: p.x / 100 * d.w, y: p.y / 1000 * d.h };
+    }
     function docMax() { return Math.max(1, document.documentElement.scrollHeight - window.innerHeight); }
+
+    var points = [].slice.call(trail.querySelectorAll('.wp')).map(function (wp) {
+      return { wp: wp, el: document.getElementById(wp.getAttribute('data-target')), dot: wp.querySelector('.wp__dot'), conn: wp.querySelector('.wp__connector'), frac: 0 };
+    });
+
+    // orme decorative lungo il percorso
+    var paws = [];
+    if (pawsBox) {
+      pawsBox.innerHTML = ''; var N = 15;
+      for (var i = 1; i < N; i++) {
+        var f = i / N, pt = pointAt(f), d0 = vb();
+        var p2 = path.getPointAtLength(Math.min(1, f + 0.004) * L);
+        var ang = Math.atan2((p2.y / 1000 * d0.h) - pt.y, (p2.x / 100 * d0.w) - pt.x) * 180 / Math.PI + 90;
+        var paw = document.createElement('span');
+        paw.className = 'trail-paw';
+        paw.style.left = pt.x + 'px'; paw.style.top = pt.y + 'px'; paw.style.setProperty('--r', ang.toFixed(1) + 'deg');
+        paw.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="15.5" rx="5" ry="4.2"/><circle cx="5.5" cy="10.5" r="2"/><circle cx="18.5" cy="10.5" r="2"/><circle cx="9" cy="6.5" r="1.8"/><circle cx="15" cy="6.5" r="1.8"/></svg>';
+        pawsBox.appendChild(paw); paws.push({ el: paw, f: f });
+      }
+    }
+
+    var nWp = points.length;
     function place() {
-      var max = docMax();
-      points.forEach(function (p) {
-        p.frac = p.el ? Math.min(Math.max(p.el.offsetTop / max, 0), 1) : 1;
-        p.wp.style.top = (p.frac * 100) + '%';
+      var d = vb();
+      points.forEach(function (p, i) {
+        p.frac = nWp > 1 ? i / (nWp - 1) : 0;
+        var pt = pointAt(p.frac);
+        p.wp.style.top = pt.y + 'px';
+        if (p.dot) p.dot.style.left = pt.x + 'px';
+        if (p.conn) { p.conn.style.left = pt.x + 'px'; p.conn.style.width = Math.max(0, d.w - pt.x - 14) + 'px'; }
       });
+      paws.forEach(function (pw) { var pt = pointAt(pw.f); pw.el.style.left = pt.x + 'px'; pw.el.style.top = pt.y + 'px'; });
     }
     var rt;
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(place, 200); });
-    window.addEventListener('load', place);
+    window.addEventListener('load', function () { place(); update(); });
     place();
 
     var idleTimer, idleShown = false;
     function update() {
       var prog = Math.min(window.scrollY / docMax(), 1);
-      progress.style.height = (prog * 100) + '%';
-      hiker.style.top = (prog * 100) + '%';
-      if (detour) detour.style.top = (prog * 100) + '%';
-      var activeIdx = 0, best = 2;
+      path.style.strokeDashoffset = L * (1 - prog);
+      var hp = pointAt(prog);
+      if (hiker) { hiker.style.left = hp.x + 'px'; hiker.style.top = hp.y + 'px'; }
+      if (detour) detour.style.top = hp.y + 'px';
+      paws.forEach(function (pw) { pw.el.classList.toggle('on', prog >= pw.f); });
+      var activeIdx = nWp > 1 ? Math.round(prog * (nWp - 1)) : 0;
       points.forEach(function (p, i) {
-        p.wp.classList.toggle('is-reached', prog >= p.frac - 0.002);
-        var d = Math.abs(prog - p.frac);
-        if (d < best) { best = d; activeIdx = i; }
+        p.wp.classList.toggle('is-reached', prog >= p.frac - 0.01);
+        p.wp.classList.toggle('is-active', i === activeIdx);
       });
-      points.forEach(function (p, i) { p.wp.classList.toggle('is-active', i === activeIdx); });
     }
     function hideDetour() { if (detour) detour.hidden = true; idleShown = false; }
-    function showDetour() {
-      if (!detour || window.scrollY / docMax() > 0.9) return;
-      detour.hidden = false; idleShown = true;
-    }
-    function onScroll() {
-      update();
-      if (idleShown) hideDetour();
-      clearTimeout(idleTimer);
-      idleTimer = setTimeout(showDetour, 7000);
-    }
+    function showDetour() { if (!detour || window.scrollY / docMax() > 0.9) return; detour.hidden = false; idleShown = true; }
+    function onScroll() { update(); if (idleShown) hideDetour(); clearTimeout(idleTimer); idleTimer = setTimeout(showDetour, 7000); }
     window.addEventListener('scroll', onScroll, { passive: true });
     update();
     idleTimer = setTimeout(showDetour, 9000);
+  }
+
+  /* ---------------- Orso che cammina (pagina natura) ---------------- */
+  function initBearWalk() {
+    var bw = document.querySelector('[data-bearwalk]');
+    if (!bw || prefersReduced) return;
+    var bear = bw.querySelector('[data-bearwalk-bear]');
+    var pawsBox = bw.querySelector('[data-bearwalk-paws]');
+    if (!bear || !pawsBox) return;
+    var paws = [];
+    function build() {
+      pawsBox.innerHTML = ''; paws = [];
+      var n = Math.max(8, Math.round(window.innerWidth / 95));
+      for (var i = 0; i < n; i++) {
+        var f = (i + 0.5) / n;
+        var p = document.createElement('span');
+        p.className = 'bearwalk__paw';
+        p.style.left = (f * 100) + '%';
+        p.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="15.5" rx="5" ry="4.2"/><circle cx="5.5" cy="10.5" r="2"/><circle cx="18.5" cy="10.5" r="2"/><circle cx="9" cy="6.5" r="1.8"/><circle cx="15" cy="6.5" r="1.8"/></svg>';
+        pawsBox.appendChild(p); paws.push({ el: p, f: f });
+      }
+    }
+    build();
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 200); });
+    function docMax() { return Math.max(1, document.documentElement.scrollHeight - window.innerHeight); }
+    function update() {
+      var prog = Math.min(window.scrollY / docMax(), 1);
+      var w = window.innerWidth, bwid = bear.offsetWidth || 80;
+      var x = prog * (w - bwid);
+      var front = x + bwid * 0.72;
+      bear.style.transform = 'translateX(' + x + 'px) translateY(' + (Math.sin(prog * 34) * 4) + 'px)';
+      paws.forEach(function (pw) { pw.el.classList.toggle('on', pw.f * w <= front); });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('load', update);
+    update();
   }
 
   /* ---------------- QA hook ---------------- */
@@ -435,6 +497,7 @@
     initGallery();
     initCursor();
     initTrail();
+    initBearWalk();
     if (!skipAnim) { initGsap(); initLenis(); }
     else { window.completeAllAnimations(); }
   }
