@@ -1031,6 +1031,53 @@ em { font-style: italic; }
 .map-embed { border-radius: var(--r-l); overflow: hidden; border: 1px solid var(--paper-3); aspect-ratio: 16/10; background: var(--paper-2); }
 .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
+/* ---------- Mappa 3D giocabile ---------- */
+.map3d {
+  position: relative;
+  aspect-ratio: 16 / 10; max-height: 72vh;
+  border-radius: var(--r-xl); overflow: hidden;
+  background: linear-gradient(160deg, #b9d2df, #dfe9cf);
+  box-shadow: var(--shadow-l);
+  touch-action: none;
+}
+.map3d__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.map3d__menu {
+  position: absolute; top: 1rem; left: 1rem; z-index: 2;
+  background: rgba(246, 240, 228, 0.92); backdrop-filter: blur(8px);
+  border-radius: var(--r-m); padding: 0.8rem 0.9rem; max-width: 220px; box-shadow: var(--shadow-m);
+}
+.map3d__menu-title { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; width: 100%; font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--ink); text-align: left; }
+.map3d__chev { transition: transform 0.25s var(--ease); font-size: 0.9rem; color: var(--forest); }
+.map3d__menu.is-collapsed .map3d__chev { transform: rotate(-90deg); }
+.map3d__menu.is-collapsed .map3d__menu-title { margin-bottom: 0; }
+.map3d__menu ul { display: flex; flex-direction: column; gap: 0.2rem; }
+.map3d__menu.is-collapsed ul { display: none; }
+.map3d__goto { display: block; width: 100%; text-align: left; font-size: var(--fs-small); font-weight: 600; color: var(--ink); padding: 0.45rem 0.6rem; border-radius: var(--r-s); transition: background 0.2s, color 0.2s; }
+.map3d__goto:hover, .map3d__goto[aria-current] { background: var(--forest); color: var(--paper); }
+.map3d__pad { position: absolute; right: 1rem; bottom: 1rem; z-index: 2; display: grid; grid-template-columns: repeat(3, 42px); grid-template-rows: repeat(2, 42px); gap: 0.35rem; }
+.map3d__btn { background: rgba(246, 240, 228, 0.92); border-radius: var(--r-s); font-size: 1.05rem; color: var(--forest); box-shadow: var(--shadow-s); display: flex; align-items: center; justify-content: center; user-select: none; -webkit-user-select: none; touch-action: none; }
+.map3d__btn:active { background: var(--forest); color: var(--paper); transform: scale(0.94); }
+.map3d__btn--up { grid-column: 2; grid-row: 1; }
+.map3d__btn--left { grid-column: 1; grid-row: 2; }
+.map3d__btn--down { grid-column: 2; grid-row: 2; }
+.map3d__btn--right { grid-column: 3; grid-row: 2; }
+.map3d__info { position: absolute; left: 1rem; bottom: 1rem; z-index: 3; max-width: 330px; background: rgba(12, 42, 30, 0.94); color: var(--paper); padding: 1rem 1.1rem; border-radius: var(--r-m); box-shadow: var(--shadow-m); }
+.map3d__info[hidden] { display: none; }
+.map3d__info h3 { color: var(--paper); font-size: var(--fs-h4); }
+.map3d__info p { font-size: var(--fs-small); color: var(--on-dark-soft); margin-top: 0.3rem; }
+.map3d__info-close { position: absolute; top: 0.3rem; right: 0.55rem; font-size: 1.5rem; line-height: 1; color: var(--on-dark-soft); }
+.map3d__hint { position: absolute; top: 1rem; right: 1rem; z-index: 2; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; color: rgba(12, 42, 30, 0.72); background: rgba(246, 240, 228, 0.82); padding: 0.35rem 0.65rem; border-radius: 100px; }
+.map3d__fallback { position: absolute; inset: 0; z-index: 4; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; background: var(--paper-2); color: var(--ink-soft); }
+.map3d__fallback[hidden] { display: none; }
+@media (max-width: 720px) {
+  .map3d { aspect-ratio: 4 / 5; max-height: 78vh; }
+  .map3d__menu { max-width: 44vw; padding: 0.6rem; }
+  .map3d__menu-title { font-size: 0.95rem; }
+  .map3d__hint { display: none; }
+  .map3d__info { max-width: calc(100% - 2rem); right: 1rem; }
+  .map3d__pad { grid-template-columns: repeat(3, 38px); grid-template-rows: repeat(2, 38px); }
+}
+
 /* ---------- Form ---------- */
 .form-stack { display: grid; gap: var(--space-s); }
 .field { display: grid; gap: 0.35rem; }
