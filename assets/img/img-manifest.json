@@ -1,0 +1,587 @@
+{
+  "GioiaDrone 16.jpg": {
+    "slug": "gioiadrone-16",
+    "width": 8064,
+    "height": 6048,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBACdASoYABIAPxFyrlAsJqQisAgBgCIJQBOmZDBpilsx26FoEAXujlL8gAD94eCKIH5RA36Rvos64kFQeojpDACFnwo0vqktBfjoG+E2EgcrTJeOonMouM0MY2oOk4ryAQAA"
+  },
+  "GioiaDrone 13.jpg": {
+    "slug": "gioiadrone-13",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASoYABIAPxF4sVIsJySisBgIAYAiCWIArAALeA5MUytL8/0ZT9lYs0EAAPniUPz7xrLFEITVAsg6kbA8j+54OWmHLIan2NLoBo7LEe3AFwCL4PwZSdqyRleD6gmsWigGVfwqX2qKegQAAA=="
+  },
+  "GioiaDrone 2.jpg": {
+    "slug": "gioiadrone-2",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoYABIAPxFysFCsJqSisAgBgCIJQBadBDUrCnf91YnWwey/oX9QAP5ZLR7ZbhLjWKNgwdWW1omGlBdzDzG9UUcl4v30o4uDZuSJSWXxGw2ELkBHDgFlEnpLnouNAebYF+TMAA=="
+  },
+  "GioiaDrone 21.jpg": {
+    "slug": "gioiadrone-21",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBACdASoYABIAPxF2sVAsJ6SisAgBgCIJYwC06CHmtY8WFRcpTclYIDMAAP6RYq3QjWMLKxz2kcVTFCc9c9O8A/VcngUPZzINdk9UPNQDOXskz78AAA=="
+  },
+  "Drone Gioia 5.jpg": {
+    "slug": "drone-gioia-5",
+    "width": 4032,
+    "height": 3024,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwBACdASoYABIAPxFur1EsJiQisBgMAYAiCWMAtsgLK/913xpOrURh7tbFf7WUwgAA+FaK3efUxDCLiOlFrNbLinsgkTbn1QAi/VLVuKmQcKwOdXarGH+l22U4GGUw4wr/rQAA"
+  },
+  "FotoGioia 69.jpg": {
+    "slug": "fotogioia-69",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoYABAAPxF0sVCsJqSisAgBgCIJaACdL1yBomfr+taD9n3pAAD9UJd0Bq/eRMhdzFVT7s9bbfQS8JUxQqTSwFSDmFpId7Y/GHg/WOIGUPc6O4gB8JAAAA=="
+  },
+  "FotoGioia 54.jpg": {
+    "slug": "fotogioia-54",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoYABAAPxF4tFGsJyUisAgBgCIJZACdACHcPzGAW96FhhvgAP6MPKOHraNZrhAbKrKqQGD4Ht7Zu+x+zLx9x6fM4ABOLZKAAAA="
+  },
+  "GioiaDrone 3.jpg": {
+    "slug": "gioiadrone-3",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoYABIAPw10sVAsJySisBgMAYAhiWMAnQAQxppqCrG/xxBlJmAA+DKr0rKyV6mVw2GQeZvEYKtbVL+Rx7MCuxMEVyxnvNPYJThUID/rx3tUvHbkP1Ue8vB8k2xCs9ZLAAA="
+  },
+  "FotoGioia 57.jpg": {
+    "slug": "fotogioia-57",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoYABAAPxF2slEsJySisAgBgCIJYgDA3B2cNmtRWXKNSboqgAD+YJrtN7sX9L9q/M79DRxIa47ofFY1Nw6ZdO1JvYyDe5voijIa2xsdri6a0WJAAAA="
+  },
+  "FotoGioia 77.jpg": {
+    "slug": "fotogioia-77",
+    "width": 5892,
+    "height": 3928,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwBACdASoYABAAPxF0sVAsJySisAgBgCIJYgCdIA/DBK3QI6t7zwBYWAAA/pQypYFAHNG9AnUKFsafZDXAR+1PAUgvCZgM9CJv6vUrmM96JH8mzzYNPNFsSY3wbX3pHphMDrGzBMRvzCFy1gAAAA=="
+  },
+  "FotoGioia 80.jpg": {
+    "slug": "fotogioia-80",
+    "width": 3654,
+    "height": 5481,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABwBgCdASoYACQAPvVmqlAqpaQitUwBUB6JaADE2CzaA1V8XrFsAL0rTk5HfAZLolncwmL/FkeqeylOSwAA/c6eWHcfX1oAwrjDWXDPr/XWeSuWfg0RhW+cqMhEEuFrsIDpV2tUG1g8UKVs5AKLFLsHeJlBmF5CnWJKIy4e5DYVL3NniBXMgGGee25lXXj47WV0+tKmCw5k/d2AAAA="
+  },
+  "FotoGioia 82.jpg": {
+    "slug": "fotogioia-82",
+    "width": 5734,
+    "height": 3823,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoYABAAPxFwsFAsJiSisAgBgCIJQBWAATWsD19fjhZMAPxakoHZKNdXJuIstq0O0pD9Qj7Gy1DhL4z+PDlZjb7k6fA0lDfWoE5NW7i9AAA="
+  },
+  "GioiaDrone 4.jpg": {
+    "slug": "gioiadrone-4",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwBACdASoYABIAPxF2tFKsJyUisBgIAYAiCUAVhzfwDlJscuidb6vY+OcRVqCzEMAA+lj3r8YpkdV4JqtxZ7rSRX5gl4vupye+rHLtSlqpaiF5KCErAWO7cgAAAA=="
+  },
+  "GioiaDrone 8.jpg": {
+    "slug": "gioiadrone-8",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQBACdASoYABIAPwluqVArpqOisAwBcCEJYwCsIWTCc5uewgWC5A3/rnp3xYAA3tUDV9kTD3AnQp+haRqEe7ob3madbiuw1uM8eP89GXmuow1lcxgKWVjgY+GEUTKTynmND9VAAAA="
+  },
+  "GioiaDrone 25.jpg": {
+    "slug": "gioiadrone-25",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwBACdASoYABIAPv1oq1ArJiQit/qoAWAfiWUAgr4IriYobfkQvg8b/xunW3MXUcAA/iY2Vy26pdI6M8YdSV3NAdUYhAhrF8aw9ffwevbN74DmlOFf97uMEfGAsEJAimvAAA=="
+  },
+  "Drone Gioia 2.jpg": {
+    "slug": "drone-gioia-2",
+    "width": 4032,
+    "height": 3024,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoYABIAPxF6sFKsJ6QiqA1RgCIJY1efWPGFm1OfBomZdFE9WQAA/rCa6m2usbU7TytSWRSYo4OuSq52cx67gNWwRV+kFhOWy3ubzTC2pCRf85+Ib2hzBEhmomh7InAAAAA="
+  },
+  "FotoGioia 9.jpg": {
+    "slug": "fotogioia-9",
+    "width": 3337,
+    "height": 5005,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBQCdASoYACQAPwlurVArpiQisAqpcCEJQBibBDv8fl38dFDNMYV8DjL1ZPK8ERlxwIeAAP7LPOpMz19kxKXVrHyrwtm3ZTYYRvc7q2XpH05KJLTfiFiKXxeiwR6APXBCbMFpRxw8kGaPaw5bPRudWv/FdHlNw2QvvwJNR7fV/DqvjfuNx5kUvZqvRoqi7KLCRcAA"
+  },
+  "FotoGioia 52.jpg": {
+    "slug": "fotogioia-52",
+    "width": 4160,
+    "height": 6240,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBgCdASoYACQAPw1urlAsJiQitVgIAYAhiWYAvdAXzURyQ7kLA/TNuWtf2yhmgK1hEhRNBkuKFEH4APzOkYFaDoSiNUl59lp5udDGNzkGLLJFuY36erlrDhRNjXMxxZUXl7WDLb6NKa+Hgz4j/yZb6Cphg/qQ9Lhh3pOIUlrVFmpTYpcSQuaBCPNiLpbnzWfG9kOzRinK+2HSNv7lMBYHSDmVKlUVC4AAAA=="
+  },
+  "FotoGioia 27.jpg": {
+    "slug": "fotogioia-27",
+    "width": 4063,
+    "height": 6094,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBgCdASoYACQAPxF0s1CsJqSiqqwBgCIJZACpJy/Bl5CxLrkooe7o6AGzMkAY93UIcR2FMlaqusqwLHyMUgAA/uC6jcFag22ayscQfgbSA7/DGfJZ5pM5Kstf5jX/8Yiixtr5ejenW4EHNC1+W10tg2qxXSOPbfkZXBJNrsoJrfNm4LyrhENfMPRP6Mj2SR2aU8QLnWL4V93Vmw7HgFlRMSEknLb+gXsASFAAAAA="
+  },
+  "FotoGioia 58.jpg": {
+    "slug": "fotogioia-58",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYABAAPxF2sVAsJ6SisAgBgCIJZACdINiBMEkHhsDTMWwAAPznDZ/WJB7gSQD3GHY2tGTXit2ebTGNSn7IlLX/vKNz2I356PRsz7128eslX0VPGEynZ4eZbGAAAA=="
+  },
+  "GioiaDrone 17.jpg": {
+    "slug": "gioiadrone-17",
+    "width": 8064,
+    "height": 6048,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoYABIAPw12sFAsJ6SisBgMAYAhiUAYUAIchMXGdhBp837oAAD3zLZ8M9Hq4+mJoTtk/HNfeMJGqPnkLjkazxtbcSpmrz45kPSjH1k3esb+E4dzA2mQwAAA"
+  },
+  "GioiaDrone 11.jpg": {
+    "slug": "gioiadrone-11",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQBACdASoYABIAPwVwrFArpqQisAwBcCCJQBbZA3KM4muYITmFkOurAMi7bAAA4YOI7UFlaK/xWjyw//bCIq56a3w8BBaVaXprd43YrbMdo38oo13ojoRhpEJC9a5Ri68nRgxlAAAAAA=="
+  },
+  "GioiaDrone 20.jpg": {
+    "slug": "gioiadrone-20",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoYABIAPxF0r1AsJqQisBgMAYAiCUAXYAIpGxZxlpIYAAD94k/19w03XGcqK48lFwKHN4u0u20t06mVgXckRLLM9tJqBiLraiKf9MASVJAAAA=="
+  },
+  "GioiaDrone 14.jpg": {
+    "slug": "gioiadrone-14",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoYABIAPxF0sVAsJySjMAgBgCIJQBf9g3KQnGQDPQdqEAD+sU48NgVoGGD/AnA/FA0CwkJqKt0RCHaQ6JLslHNlEV9mjfxPbFYwQn5zgiYAAA=="
+  },
+  "FotoGioia 47.jpg": {
+    "slug": "fotogioia-47",
+    "width": 6067,
+    "height": 4045,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoYABAAPxFysVAsJqSisAgBgCIJZACo9AMlepC7kMHCAADuZKuw9h+rQKcO63dQ6bsHaayDrMtHLjRefXK5M/sgDe/He3LKSixVW0rFEBsrH+W0OhsqmsGeSsgAAA=="
+  },
+  "FotoGioia 66.jpg": {
+    "slug": "fotogioia-66",
+    "width": 6094,
+    "height": 4063,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoYABAAPxF0sFAsJySisAgBgCIJYgCdAB9hA8cv7HB8D5V3kIAA/lncOycXEphaq1FW4YjaWByNq64bb1yp2TMEnMYGP6pJDYFB+FskVwozApqBnpvVomDnOFGxh1lRNAol5PEYGAA="
+  },
+  "Drone Gioia 1.jpg": {
+    "slug": "drone-gioia-1",
+    "width": 4032,
+    "height": 3024,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQBACdASoYABIAPxFssVAsJaSisBgMAYAiCWMAwzQRRZ9rUncw9c7XEWVL6WwYAAD+jEGuPtH0u3+onX1GvT9bWpogLjABnFsHmJXGEdf/CVb0bNJzOGdyS0RoAAAA"
+  },
+  "GioiaDrone 12.jpg": {
+    "slug": "gioiadrone-12",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBACdASoYABIAPxF8slGsKCSisBgIAYAiCUAW2QI9MvMG1H4ilOfR7L2wANyHXgu9BIoidmYovScdUNa3oLNstIpPuycGVhIFjXsb2i16A8g44+1m9IzBUFE0AOUAAAA="
+  },
+  "FotoGioia 33.jpg": {
+    "slug": "fotogioia-33",
+    "width": 4046,
+    "height": 6069,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAAAwBgCdASoYACQAPxFyr1EsJqQisBVdUYAiCWQAqPQKWxVJ8r32QAExx759DwOfgmgvu4JKJRh+YOQAAP0U2qRyZ/YdD8MBHQF+1wD9/juem8Bm3mb3f2h9d/+/c+aKGx7KJ3T7Vbsoa7k809lv/P4aemvf/9ZxS5edxjq6obdR0WqqAQxzfb9I96GSKHSnEZ5Qf5qcgMvpiO+nK4U8K6hf4YGv5biGQAA="
+  },
+  "FotoGioia 67.jpg": {
+    "slug": "fotogioia-67",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJYgCdLwG4ABWMJKr2j0AA/GP2aGIjB5GO07pVVpk8ONY3iL+J0cwGfOv/jVenQxeGC2fpJbrftMrKYNkM65kU8RbsAbdkRjiLQYFAAAA="
+  },
+  "GioiaDrone 6.jpg": {
+    "slug": "gioiadrone-6",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYABIAPxFuslMsJaQisBgIAYAiCWMAtsgQtLaqskfNixIAAPI71kKCs5o0GtJ10RXBFzhDfZ3h4MKzH/vhc3stNeyU8LbYKvI5bqKSN+1kEG6BRDZ1CSbPAAA="
+  },
+  "GioiaDrone 7.jpg": {
+    "slug": "gioiadrone-7",
+    "width": 8192,
+    "height": 6144,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoYABIAPxF8sFGsKCSisBgIAYAiCWUAyJgQ3SOBRzQH+YBxgPcyQADyka3MbRNUztqGdHUI8w84GQqO08h/OrPmvj4KQgEOrSZ+bwnHVpj/ic+ErVQAAA=="
+  },
+  "GioiaDrone 18.jpg": {
+    "slug": "gioiadrone-18",
+    "width": 8064,
+    "height": 6048,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoYABIAPxGAt1WsJ6UjKAgBgCIJQBjeg3MlElG/AAD+0kk2rcz+CUYZhWaW9pAuNnoxygMWJIQNaZqKFxqkh5dJ3jlAAA=="
+  },
+  "FotoGioia 1.jpg": {
+    "slug": "fotogioia-1",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoYABAAPxF2sVCsJySisAgBgCIJQAALidDt0dDlLqeKAAD+jDucWkHwlRdUNm+D3mW+xp4w4snEG8lzJtIOtV1y9ii0AgEwAAA="
+  },
+  "FotoGioia 75.jpg": {
+    "slug": "fotogioia-75",
+    "width": 6069,
+    "height": 4046,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoYABAAPxFwsFAsJiSisAgBgCIJYgC7ABbhaYjVivPoCofAAAD90V3Dd9mf7bOnLmX5qYCvQ/5Qjc9pSFKkhMVMscoBd9t1+2ZsvLC2p7UkyXTKgSj+DJmjBqwAAA=="
+  },
+  "FotoGioia 45.jpg": {
+    "slug": "fotogioia-45",
+    "width": 4488,
+    "height": 2992,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwAwCdASoYABAAPxF4slEsJ6SisAgBgCIJZgCdAA4fPmlhuWIA/enlmyWmSUrOwJNieEW6nOZ0cbPgr+pN3z4pW6cxX7b2TZT8kM7ROPNQc5vjvdXWGq1Sdi6w/0uBIrDwAA=="
+  },
+  "FotoGioia 40.jpg": {
+    "slug": "fotogioia-40",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoYABAAPxF0slCsJqSisAgBgCIJYwC+SBE8SxB6k2vQQADg2D3mx22bzJG8KVGehBcWhH7sSKRZZJwy2r7K6kPjzES4CTU2ijBs9qan48k3MQAA"
+  },
+  "FotoGioia 60.jpg": {
+    "slug": "fotogioia-60",
+    "width": 3662,
+    "height": 5493,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBQCdASoYACQAPwFqrlArJiSitVgMAWAgCUAXYAHM4UflkGlu8c7Ux/Shzsc8gbLSDmAA2x+1KCArUEY/J+4h03mRUV5coH4jE5z077ouvP1OvPxysbkDwws0Jlm/EhQ+u+ykxVUcYHQ79lKB993NZ8NUlzTbs23+praw8pMI2qCBlIknGPNwAAA="
+  },
+  "FotoGioia 5.jpg": {
+    "slug": "fotogioia-5",
+    "width": 6069,
+    "height": 4046,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPxF0sFCsJqSisAgBgCIJZACdH8AC9HgfWhClLX0BIOAA/lmSBI+F7FukfG+b37qosCGBXlkCZf/LY5Q4VkmXTwGhlWTUZlW96Wduwde20ovM0kvJLmmp6m0w6fqc1YSLHMAi4AAA"
+  },
+  "FotoGioia 20.jpg": {
+    "slug": "fotogioia-20",
+    "width": 6067,
+    "height": 4045,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQBACdASoYABAAPxFysFAsJqSisAgBgCIJagCdMoRwACmHQKweFb7ws8oAAP5SMulU9P5YQfEsd82PMlz32AEjbIhszoTOnIlMc22WKcjU5URzh1ylDd1DWEv1qgM4DupEAAAA"
+  },
+  "FotoGioia 15.jpg": {
+    "slug": "fotogioia-15",
+    "width": 4160,
+    "height": 6240,
+    "orientation": "portrait",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBgCdASoYACQAPxFusVEsJiSisBqqqYAiCWUAuwAWboHMW1T0m4+xL0gq2ux0RzlR1b1ROcpwckAA/q71kw//TJ4vjnWAdMXb+Gl3w5j9AcZbuZFkGR/blpSnxCfVWC7u5V+okONmgRKTRQFD/6RGIwjlZlOpQ3sfxVD5jkTb2aoTlcT6WAAA"
+  },
+  "FotoGioia 48.jpg": {
+    "slug": "fotogioia-48",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoYABAAPxF0tFAsJyUisAgBgCIJQBdmUABf2UFvi3VjmA9UxkAA/r9p7LitmyJrxomyQ3wMFsA3j1YzgvTq5QS8xyTja3OvUcVgcRPB2t1fClU+N7t3d1zKKsAAAA=="
+  },
+  "FotoGioia 78.jpg": {
+    "slug": "fotogioia-78",
+    "width": 6069,
+    "height": 4046,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAALtGIxGIkLCwsDADQSxAE6AIH8DmKe+8TmX2abr/wAP7JK4Uz0/zevi6TxtrYhDK4djx118zcZFmQpsdEI3oX6lNXUkk7Rj0CpThpQTRhV1CFmkAA"
+  },
+  "FotoGioia 70.jpg": {
+    "slug": "fotogioia-70",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoYABAAPxFysVAsJqSisAgBgCIJaACdACBXKBGXVO4576AA/hWzmbTUFjzErSZIo90qyBjJicshvmnseQK9XQoRV8/YEzzqGfaUFkTou1qwiRlyjvDgAA=="
+  },
+  "FotoGioia 63.jpg": {
+    "slug": "fotogioia-63",
+    "width": 6240,
+    "height": 4160,
+    "orientation": "landscape",
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "fallbackWidth": 1600,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoYABAAPxFwsFAsJiSisAgBgCIJZgCdABST0JJ4zbv5pf3SEAD+cHtqtX/Ux+b9dE4KK5sTgjGPkuMeCG1pFNn1M5R5hiw/a8WqlqPTQXXjohlXMVwAAA=="
+  }
+}
