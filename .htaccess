@@ -1,5 +1,8 @@
 # ViviGioia — configurazione Apache (Cloudways)
 
+# IMPORTANTE: dai priorità a index.html sul default index.php di Cloudways
+DirectoryIndex index.html index.htm index.php
+
 # Charset di default
 AddDefaultCharset UTF-8
 
