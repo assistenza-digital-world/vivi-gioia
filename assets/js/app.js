@@ -104,7 +104,7 @@
 
   /* ---------------- REVEAL (IntersectionObserver) ---------------- */
   function initReveal() {
-    var els = document.querySelectorAll('.reveal, .reveal-stagger');
+    var els = document.querySelectorAll('.reveal, .reveal-stagger, .media, .gallery__slide');
     if (!els.length) return;
     if (prefersReduced || !('IntersectionObserver' in window)) {
       els.forEach(function (el) { el.setAttribute('data-reveal', 'in'); });
@@ -117,14 +117,14 @@
         if (el.classList.contains('reveal-stagger')) {
           var kids = el.children, i = 0;
           [].forEach.call(kids, function (k) {
-            k.style.transitionDelay = (i * 90) + 'ms';
+            k.style.transitionDelay = (i * 95) + 'ms';
             i++;
           });
         }
         el.setAttribute('data-reveal', 'in');
         io.unobserve(el);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
     els.forEach(function (el) { io.observe(el); });
   }
 
@@ -193,6 +193,20 @@
           gsap.to(el, {
             yPercent: amount, ease: 'none',
             scrollTrigger: { trigger: el.closest('section') || el, start: 'top bottom', end: 'bottom top', scrub: true }
+          });
+        });
+        // parallax leggero automatico sugli spotlight (hanno overscan, niente bordi)
+        document.querySelectorAll('.spotlight__media img').forEach(function (img) {
+          gsap.fromTo(img, { yPercent: -5 }, {
+            yPercent: 5, ease: 'none',
+            scrollTrigger: { trigger: img.closest('section') || img, start: 'top bottom', end: 'bottom top', scrub: true }
+          });
+        });
+        // page-hero / cta-strip: parallax con overscan via scala costante
+        document.querySelectorAll('.page-hero__media img, .cta-strip__media img').forEach(function (img) {
+          gsap.fromTo(img, { yPercent: -6, scale: 1.14 }, {
+            yPercent: 6, scale: 1.14, ease: 'none',
+            scrollTrigger: { trigger: img.closest('section') || img, start: 'top bottom', end: 'bottom top', scrub: true }
           });
         });
         // galleria a scorrimento orizzontale guidato dallo scroll verticale
