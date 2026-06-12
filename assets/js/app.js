@@ -333,12 +333,15 @@
     document.body.classList.add('has-cursor');
     var needle = cur.querySelector('.cursor__needle');
     var x = window.innerWidth / 2, y = window.innerHeight / 2, tx = x, ty = y, ang = 0;
-    document.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    var sel = 'a, button, input, textarea, select, label, summary, .wp__link, [role="button"], [onclick], [data-cursor-hover]';
+    document.addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      var t = e.target;
+      var clickable = !!(t && t.closest && t.closest(sel)) || (t && getComputedStyle(t).cursor === 'pointer');
+      cur.classList.toggle('is-hover', clickable);
+    }, { passive: true });
     document.addEventListener('mousedown', function () { cur.classList.add('is-down'); });
     document.addEventListener('mouseup', function () { cur.classList.remove('is-down'); });
-    var sel = 'a, button, input, textarea, select, .wp__link, [data-cursor-hover]';
-    document.addEventListener('mouseover', function (e) { if (e.target.closest && e.target.closest(sel)) cur.classList.add('is-hover'); });
-    document.addEventListener('mouseout', function (e) { if (e.target.closest && e.target.closest(sel)) cur.classList.remove('is-hover'); });
     document.documentElement.addEventListener('mouseleave', function () { cur.style.opacity = '0'; });
     document.documentElement.addEventListener('mouseenter', function () { cur.style.opacity = ''; });
     function raf() {
