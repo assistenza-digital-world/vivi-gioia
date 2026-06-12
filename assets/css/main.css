@@ -58,34 +58,34 @@
   --fs-kicker: clamp(0.72rem, 0.68rem + 0.2vw, 0.82rem);
   --fs-small: clamp(0.84rem, 0.8rem + 0.2vw, 0.92rem);
   --fs-body: clamp(1rem, 0.96rem + 0.25vw, 1.12rem);
-  --fs-lead: clamp(1.15rem, 1.05rem + 0.6vw, 1.4rem);
+  --fs-lead: clamp(1.18rem, 1.05rem + 0.7vw, 1.55rem);
   --fs-h4: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
-  --fs-h3: clamp(1.5rem, 1.2rem + 1.4vw, 2.2rem);
-  --fs-h2: clamp(2rem, 1.5rem + 2.6vw, 3.4rem);
-  --fs-h1: clamp(2.6rem, 1.7rem + 4.5vw, 5.2rem);
-  --fs-display: clamp(3rem, 1.6rem + 7vw, 7.5rem);
+  --fs-h3: clamp(1.55rem, 1.2rem + 1.5vw, 2.35rem);
+  --fs-h2: clamp(2.1rem, 1.5rem + 2.9vw, 3.7rem);
+  --fs-h1: clamp(2.7rem, 1.7rem + 4.9vw, 5.8rem);
+  --fs-display: clamp(3.1rem, 1.5rem + 7.6vw, 8.4rem);
 
   /* Spaziatura fluida */
   --space-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
   --space-s: clamp(0.85rem, 0.7rem + 0.7vw, 1.2rem);
   --space-m: clamp(1.3rem, 1rem + 1.3vw, 2rem);
   --space-l: clamp(2.2rem, 1.6rem + 2.6vw, 3.6rem);
-  --space-xl: clamp(3.2rem, 2.2rem + 4.5vw, 6rem);
-  --space-2xl: clamp(4.5rem, 3rem + 6.5vw, 9rem);
+  --space-xl: clamp(3.4rem, 2.2rem + 5vw, 7rem);
+  --space-2xl: clamp(5rem, 3rem + 7.5vw, 11rem);
 
   /* Layout */
-  --container: 1240px;
+  --container: 1280px;
   --container-narrow: 760px;
-  --gutter: clamp(1.1rem, 0.6rem + 2.5vw, 2.5rem);
+  --gutter: clamp(1.2rem, 0.6rem + 2.8vw, 2.8rem);
 
-  /* Raggi, ombre */
-  --r-s: 6px;
-  --r-m: 14px;
-  --r-l: 22px;
-  --r-xl: 32px;
-  --shadow-s: 0 2px 10px rgba(32, 37, 28, 0.08);
-  --shadow-m: 0 14px 40px -12px rgba(32, 37, 28, 0.28);
-  --shadow-l: 0 30px 70px -20px rgba(24, 39, 27, 0.45);
+  /* Raggi, ombre — morbidi (stile editoriale Framer) */
+  --r-s: 8px;
+  --r-m: 16px;
+  --r-l: 26px;
+  --r-xl: 40px;
+  --shadow-s: 0 3px 14px rgba(32, 37, 28, 0.07);
+  --shadow-m: 0 20px 52px -18px rgba(32, 37, 28, 0.24);
+  --shadow-l: 0 44px 96px -26px rgba(24, 39, 27, 0.42);
 
   /* Motion */
   --dur-fast: 150ms;
@@ -176,6 +176,17 @@ em { font-style: italic; }
 }
 .kicker--center::before { display: none; }
 
+/* Overline numerate sulle sezioni (firma editoriale stile Framer) */
+main { counter-reset: vgsec; }
+.section-head > .kicker:not(.kicker--center) { counter-increment: vgsec; gap: 0.8em; }
+.section-head > .kicker:not(.kicker--center)::before {
+  content: counter(vgsec, decimal-leading-zero);
+  width: auto; height: auto; background: none; opacity: 1;
+  border: 1.5px solid currentColor; border-radius: 100px;
+  padding: 0.22em 0.7em; font-size: 0.92em;
+  letter-spacing: 0.06em; font-variant-numeric: tabular-nums;
+}
+
 .lead {
   font-size: var(--fs-lead);
   line-height: 1.5;
@@ -201,9 +212,12 @@ em { font-style: italic; }
 .container--narrow { max-width: var(--container-narrow); }
 .section { padding-block: var(--space-2xl); }
 .section--tight { padding-block: var(--space-xl); }
-.section-head { max-width: 64ch; margin-bottom: var(--space-l); }
+.section-head { max-width: 60ch; margin-bottom: var(--space-l); }
+.section-head h2 { letter-spacing: -0.025em; }
 .section-head--center { margin-inline: auto; text-align: center; }
-.section-head .lead { margin-top: var(--space-s); }
+.section-head--center .kicker { justify-content: center; }
+.section-head .lead { margin-top: var(--space-m); max-width: 56ch; }
+.section-head--center .lead { margin-inline: auto; }
 .bg-paper-2 { background: var(--paper-2); }
 .bg-forest { background: var(--forest-deep); color: var(--on-dark); }
 .bg-forest h1, .bg-forest h2, .bg-forest h3, .bg-forest h4 { color: var(--on-dark); }
@@ -378,9 +392,9 @@ em { font-style: italic; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55em;
-  padding: 0.95em 1.6em;
-  min-height: 48px;
+  gap: 0.6em;
+  padding: 1.05em 1.9em;
+  min-height: 54px;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: var(--fs-small);
